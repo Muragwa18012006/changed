@@ -24,7 +24,7 @@ const SignPage = () => {
   const onSignup = async () => {
     try {
       setLoading(true)
-      const response = await axios.post("/api/users/signup", user)
+      const response = await axios.post(`${process.env.DOMAIN}/api/users/signup`, user)
       console.log(response.data)
       router.push("/login")
     } catch (error: any) {
