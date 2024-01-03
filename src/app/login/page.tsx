@@ -15,7 +15,7 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false)
   const onLogin = async () => {
     try {
-      const response = await axios.post(`${process.env.DOMAIN}/api/users/login`, user)
+      const response = await axios.post(`${"https://changed.vercel.app"}/api/users/login`, user)
       console.log(response.data)
       toast.success("logged in successfully")
       router.push("/profile")
